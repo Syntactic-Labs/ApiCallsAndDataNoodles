@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User, HARDCODED_USERS } from './models/mock-json-data';
 
 @Component({
   selector: 'app-table-for-data',
@@ -6,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./table-for-data.component.css']
 })
 export class TableForDataComponent implements OnInit {
+  users: User[] = [];
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit(): void { 
+    this.users = HARDCODED_USERS; 
   }
 
 }
